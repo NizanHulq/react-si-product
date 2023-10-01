@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { useAlert, Provider as AlertProvider } from 'react-alert';
-import AlertTemplate from 'react-alert-template-basic';
 
 import CreateProduct from './product/CreateProduct'
 
@@ -13,9 +11,7 @@ const options = {
 function App() {
 
   return (
-    <AlertProvider template={AlertTemplate} {...options}>
       <CreateProduct />
-    </AlertProvider>
   )
 }
 

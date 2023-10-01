@@ -1,6 +1,5 @@
 import React, { Component, useEffect, useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
-import { useAlert } from 'react-alert';
 
 import '@/styles/style.css'
 import bootstrapLogo from '@/assets/bootstrap-logo.svg'
@@ -35,7 +34,6 @@ const validateSvgImage = (file) => {
 };
 
 const CreateProduct = () => {
-    const alert = useAlert()
 
     const [productName, setProductName] = useState('')
     const [productCat, setProductCat] = useState('')
@@ -86,9 +84,9 @@ const CreateProduct = () => {
         if (isProductNameValid && isProductCatValid && isProductFreshnessValid && isProductPriceValid && isProductImageValid) {
             setProducts([...products, newProduct]);
             localStorage.setItem('products', JSON.stringify([...products, newProduct]));
-            alert.success('Selamat produk berhasil ditambahkan!')
+            // alert.success('Selamat produk berhasil ditambahkan!')
         } else {
-            alert.error('Mohon isi semua data product!')
+            // alert.error('Mohon isi semua data product!')
             return;
         }
         
@@ -105,7 +103,7 @@ const CreateProduct = () => {
             const newProducts = products.filter((product) => product.id !== productId)
             setProducts(newProducts)
             localStorage.setItem('products', JSON.stringify(newProducts));
-            alert.success('Selamat produk berhasil dihapus!')
+            // alert.success('Selamat produk berhasil dihapus!')
         }
 
     }

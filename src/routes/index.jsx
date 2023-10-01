@@ -1,6 +1,4 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
-import { Provider as AlertProvider } from 'react-alert';
-import AlertTemplate from 'react-alert-template-basic';
 
 
 import Home from "@/pages/home/home"
@@ -30,9 +28,9 @@ const Router = () => {
             },
             {
                 path: "/product/create",
-                element: isLoggedIn() ? <AlertProvider template={AlertTemplate} {...options}>
+                element: isLoggedIn() ? 
                     <CreateProduct />
-                </AlertProvider> : <Navigate to="/" />
+                 : <Navigate to="/" />
             },
             {
                 path: "/product/:id",
