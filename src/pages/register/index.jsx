@@ -1,6 +1,6 @@
 import React from 'react';
-import RegistrationForm from './RegistrationForm';
 import Header from '@/components/header';
+import RegistrationForm from './registrationForm';
 
 const RegistrationPage = () => {
     return (
